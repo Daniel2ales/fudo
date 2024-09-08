@@ -4,7 +4,7 @@ export const Container = styled.button`
   padding: 1rem 2rem;
   outline: none;
   border: none;
-  font-size: ${({ theme }) => theme.SIZE.SMALL};
+  font-size: ${({ theme }) => theme.SIZE.MEDIUM};
   color: ${({ theme }) => theme.COLORS.WHITE};
   background-color: ${({ theme }) => theme.COLORS.PRIMARY};
   white-space: nowrap;

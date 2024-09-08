@@ -1,7 +1,11 @@
+// Import React and other necessary libraries
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
+
+// Import styled components
 import { Container, Header, Service, Client, Download } from "./styles";
 
+// Import assets
 import HeaderImg from "../assets/header.png";
 import BikeImg from "../assets/delivery-bike.png";
 import ServiceImg1 from "../assets/service-1.jpg";
@@ -11,11 +15,12 @@ import ClientImg from "../assets/client.png";
 import UserImg from "../assets/user.jpg";
 import DownloadImg from "../assets/download.png";
 
+// Import components
 import { NavBar } from "../components/NavBar";
-import 'remixicon/fonts/remixicon.css';
 import { Button } from "../components/Button";
 import { Menu } from "../components/Menu";
 import { Footer } from "../components/Footer";
+import 'remixicon/fonts/remixicon.css';
 
 // Define ScrollReveal options
 const scrollRevealOptions = {
@@ -24,7 +29,7 @@ const scrollRevealOptions = {
   duration: 1000,
 };
 
-// Function to initialize ScrollReveal animations
+// Initialize ScrollReveal animations
 const initializeScrollReveal = () => {
   const sr = ScrollReveal();
 
@@ -103,7 +108,7 @@ const initializeScrollReveal = () => {
 
 // Page component
 export function Page() {
-  // Initialize ScrollReveal when component mounts
+  // Initialize ScrollReveal when the component mounts
   useEffect(() => {
     initializeScrollReveal();
   }, []);
@@ -137,6 +142,7 @@ export function Page() {
           </div>
         </section>
       </Header>
+
       <Service className="section__container service__container" id="service">
         <p className="section__subheader">WHAT WE SERVE</p>
         <h2 className="section__header">Your Favourite Food Delivery Partner</h2>
@@ -158,7 +164,9 @@ export function Page() {
           </div>
         </div>
       </Service>
+
       <Menu />
+
       <Client className="section__container client__container" id="client">
         <div className="client__image">
           <img src={ClientImg} alt="Client" />
@@ -189,17 +197,18 @@ export function Page() {
           </div>
         </div>
       </Client>
+
       <Download className="download__container" id="contact">
         <div className="section__container">
           <div className="download__image">
-            <img src={DownloadImg} alt="download" />
+            <img src={DownloadImg} alt="Download" />
           </div>
           <div className="download__content">
             <p className="section__subheader">DOWNLOAD APP</p>
             <h2 className="section__header">Get Started With Fudo Today!</h2>
             <p className="section__description">
               Discover food wherever and whenever you want and get your food
-              delivered on time, everytime.
+              delivered on time, every time.
             </p>
             <div className="download__btn">
               <Button title="Get Started" />
@@ -207,6 +216,7 @@ export function Page() {
           </div>
         </div>
       </Download>
+
       <Footer />
     </Container>
   );
