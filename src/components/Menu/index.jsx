@@ -28,12 +28,11 @@ export function Menu() {
       <p className="section__subheader">OUR MENU</p>
       <h2 className="section__header">Menu That Always Makes You Fall In Love</h2>
       
-      {/* Swiper component with auto play, loop, and navigation buttons */}
       <Swiper
         spaceBetween={30}
         slidesPerView={3}
         loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }} // Automatic scroll every 3 seconds
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -45,8 +44,8 @@ export function Menu() {
             slidesPerView: 3,
           },
         }}
-        navigation={true} // Enable navigation buttons
-        modules={[Navigation, Autoplay]} // Ensure both Navigation and Autoplay modules are used
+        navigation={true}
+        modules={[Navigation, Autoplay]} 
         onSlideChange={() => console.log('Slide changed')}
         onSwiper={(swiper) => console.log('Swiper instance:', swiper)}
       >
