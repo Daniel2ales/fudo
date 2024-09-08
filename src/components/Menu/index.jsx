@@ -7,9 +7,13 @@ import FoodImg5 from "../../assets/menu-5.jpg";
 import FoodImg6 from "../../assets/menu-6.jpg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay'; // Import Swiper autoplay CSS
+import { Navigation, Autoplay } from 'swiper/modules';
 
+// Component definition
 export function Menu() {
-  // Lista dos itens do menu
+  // Menu items
   const menuItems = [
     { src: FoodImg1, alt: "Italian Pizza", name: "Italian Pizza", price: "7.49" },
     { src: FoodImg2, alt: "Burrito Wrap", name: "Burrito Wrap", price: "4.49" },
@@ -24,10 +28,12 @@ export function Menu() {
       <p className="section__subheader">OUR MENU</p>
       <h2 className="section__header">Menu That Always Makes You Fall In Love</h2>
       
-      {/* Swiper principal */}
+      {/* Swiper component with auto play, loop, and navigation buttons */}
       <Swiper
         spaceBetween={30}
         slidesPerView={3}
+        loop={true}
+        autoplay={{ delay: 3000, disableOnInteraction: false }} // Automatic scroll every 3 seconds
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -39,6 +45,8 @@ export function Menu() {
             slidesPerView: 3,
           },
         }}
+        navigation={true} // Enable navigation buttons
+        modules={[Navigation, Autoplay]} // Ensure both Navigation and Autoplay modules are used
         onSlideChange={() => console.log('Slide changed')}
         onSwiper={(swiper) => console.log('Swiper instance:', swiper)}
       >

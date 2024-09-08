@@ -16,6 +16,10 @@ export const Container = styled.section`
     max-width: 45rem;
   }
 
+  .swiper-button-prev, .swiper-button-next {
+    color: #ffffff;
+}
+
   .menu__card {
     position: relative;
     isolation: isolate;
